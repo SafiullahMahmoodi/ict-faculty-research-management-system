@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Sahel";
+  src: url("fonts/Vazirmatn-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Sahel, sans-serif;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.scroll {
+  height: calc(100vh - 66px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 5px;
+}
+.sidebar {
+  scroll-behavior: none;
+  overflow-y: auto;
+  background-color: #ffffff;
+  color: black;
+  position: fixed;
+  top: 0;
+  padding: 12px 0;
+}
+div.stick {
+  position: sticky;
+  top: 0;
+}
+
+/* Each menu item */
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 10px 5px; /* small left space */
+}
+
+/* Icons */
+.sidebar ul li i {
+  width: 30px;
+  margin: 0 15px 0 0; /* controls space between icon and text */
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 10px;
+}
+li {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #000066;
+  border-radius: 10px;
+  color: #fff;
+}
+a {
+  font-size: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: content-box;
+}
+
+p span {
+  font-size: 28px;
+  padding-bottom: 0px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+div.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar {
+  scroll-behavior: none;
+  background-color: #ffffff;
+  color: black;
+  position: fixed;
+  top: 0;
+  padding: 12px 0;
+}
+div.stick {
+  position: sticky;
+  top: 0;
+}
+
+/* Each menu item */
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 10px 5px; /* small left space */
+}
+
+/* Icons */
+.sidebar ul li i {
+  width: 30px;
+  margin: 0 15px 0 0; /* controls space between icon and text */
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 10px;
+}
+li {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #000066;
+  border-radius: 10px;
+  color: #fff;
+}
+ul li a {
+  font-size: 12px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: inherit;
+  box-sizing: content-box;
+}
+
+p span {
+  font-size: 28px;
+  padding-bottom: 0px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+div.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+}
+
+div.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+}
+tbody {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  font-size: 13px;
+}
+thead {
+  font-size: 15px;
+}
+
+.table-scroll {
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.table-scroll table {
+  width: 100%;
+  margin: 3px !important;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* IMPORTANT: only TH is sticky */
+.table-scroll thead th {
+  position: sticky;
+  top: 0 !important;
+  z-index: 1000;
+
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* Keep body below header */
+.table-scroll tbody {
+  position: relative;
+  z-index: 0;
+}

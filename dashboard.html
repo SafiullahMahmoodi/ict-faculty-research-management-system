@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+        <link rel="icon" type="image/x-icon" href="img/rms.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<style>
+
+
+  .sysname::after{
+    content: bi;
+
+  }
+  .navbar {
+    z-index: 1050 !important;
+}
+
+.navbar .dropdown-menu {
+    z-index: 1070 !important;
+}
+
+#profile:hover{
+  border: 3px solid #fff;
+
+}
+
+</style>
+
+  </head>
+  <body class="" dir="rtl">
+    <nav
+      class="navbar navbar-expand-lg navbar-light justify-content-between p-2 text-white position-sticky top-0 w-100"
+      style="background-color: #0b2a4a;"
+    >
+      <div>
+        <img
+          src="img/rms.png"
+          alt=""
+          width="45px"
+          height="45px"
+          class="rounded-4 mx-2"
+          onclick=""
+        />
+        <span id="sysname" class="navbar-brand  text-white mb-0 h1" style="font-size: 14px"
+          >سیستم مدیریت تحقیق</span
+        >
+        <button class="btn bg-none text-light fs-4 m-0 p-0" id="list">
+        <i class="bi bi-list mx-3 bi-lg"></i>
+</button>
+      </div>
+      <div class="d-flex align-items-center fs-14 gap-3">
+        <i class="bi bi-bell"></i><!-- Button -->
+        <div class="dropdown">
+
+
+ <img src="img/Myphoto.JPG" alt="" width="40px" height="40px" class="rounded-5" data-bs-toggle="dropdown" data-bs-target="#dropdown" style="cursor: pointer;" id="profile" ></span> 
+
+<div class="dropdown-menu" id="dropdown" style="width: 250px; height: 430px;">
+  <div class="position-absolute d-none"></div>
+<div class="profile-photo d-flex justify-content-center flex-column align-items-center my-4" >
+    <img src="img/Myphoto.JPG" alt="my photo" width="60px" height="60px" style="border-radius: 50%;" class="d-block">
+    <h3 class="m-0">username</h3>
+    <p class="text-lightgray">email</p>
+</div>
+<hr>
+    <nav
+          class="sidebar d-flex justify-content-start flex-column fs-14  p-1"
+          style="position: sticky; top: 0"
+        >
+          <ul>
+            <li>
+              <a href="profile.html"
+                ><i class="bi bi-person"></i>پروفایل</a
+              >
+            </li>
+            <li>
+              <a href="article.html"
+                ><i class="bi bi-key"></i> تغییر رمز</a
+              >
+            </li>
+            <li>
+              <a href="theses.html"
+                ><i class="bi bi-gear"> </i> تنظیمات حساب </a
+              >
+            </li>
+            <hr>
+            <li>
+              <a href="index.html"><i class="bi bi-box-arrow-left"></i>  خروج</a>
+            </li>
+            
+     
+          </ul>
+        </nav>
+</div>
+</div>
+
+
+
+    </nav>
+        
+    <div class="d-flex flex-row" id="menu">
+      <div class="vh-100 stick" style="width: 200px; background-color: #ffffff">
+        <nav
+          class="sidebar d-flex justify-content-start flex-column fs-14 vh-100 p-1"
+          style="position: sticky; top: 0"
+        >
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="bi bi-house-door"></i>داشبورد</a
+              >
+            </li>
+            <li>
+              <a href="article.html"
+                ><i class="bi bi-file-text"></i> مقالات</a
+              >
+            </li>
+            <li>
+              <a href="theses.html"
+                ><i class="bi bi-journal-bookmark"> </i>پایان نامه ها</a
+              >
+            </li>
+            <li>
+              <a href="books.html"><i class="bi bi-book"></i> کتاب ها</a>
+            </li>
+            <li>
+              <a href="translated_books.html">
+                <i class="bi bi-translate"> </i>کتاب های ترجمه شده
+              </a>
+            </li>
+            <li>
+              <a href="teachers.html"
+                ><i class="bi bi-person-workspace"> </i>استادان</a
+              >
+            </li>
+            <li>
+              <a href="students.html"><i class="bi bi-people"> </i>محصلان</a>
+            </li>
+            <li>
+              <a href="departments.html"
+                ><i class="bi bi-bank"></i> دیپارتمان ها</a
+              >
+            </li>
+            <li>
+              <a href="reports.html">
+                <i class="bi bi-file-earmark-bar-graph"></i> گزارشات
+              </a>
+            </li>
+            <li>
+              <a href="users.html"><i class="bi bi-people"> </i>استفاده کننده گان</a>
+            </li>
+
+            <li>
+              <a href=""><i class="bi bi-gear"> </i>تنظیمات</a>
+            </li>
+            <li>
+              <a href=""><i class="bi bi-info-circle"> </i>درباره سیستم</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- right side -->
+ <div class="container-fluid p-2 bg-light scroll" style="width: calc(100% - 180px); padding-bottom: 20px; margin: 0px;">
+        <div class="container d-flex flex-column px-1 py-2">
+          <div class="header mb-1">
+            <h5>به سیستم مدیریت تحقیق خوش آمدید </h5>
+            <p class="" style="font-size: 12px">
+            پوهنځی تکنالوژی معلوماتی و مخابراتی پوهنتون کابل
+            </p>
+          </div>
+          <div class="row g-2 mb-0" style="z-index: 3;">
+            <!-- Articles -->
+            <div class="col-12 col-sm-6 col-lg-2">
+              <div class="card border-0 shadow-sm rounded-4 p-2 h-100">
+                <div class="d-flex gap-3 h-100">
+                  <div
+                    class="bg-primary-subtle rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 55px; height: 55px"
+                  >
+                    <i
+                      class="bi bi-file-earmark-text-fill text-primary fs-2"
+                    ></i>
+                  </div>
+
+                  <div class="d-flex flex-column h-100">
+                    <h4 class="fw-normal mb-1">25</h4>
+                    <p class="mb-auto text-nowrap small">مقالات</p>
+
+                    <a
+                      href="article.html"
+                      class="text-primary text-decoration-none"
+                      style="font-size: 12px"
+                    >
+                      مشاهده همه <i class="bi bi-arrow-left"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Theses -->
+            <div class="col-12 col-sm-6 col-lg-2">
+              <div class="card border-0 shadow-sm rounded-4 p-2 h-100">
+                <div class="d-flex gap-3 h-100">
+                  <div
+                    class="bg-success-subtle rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 55px; height: 55px"
+                  >
+                    <i class="bi bi-mortarboard-fill text-success fs-2"></i>
+                  </div>
+
+                  <div class="d-flex flex-column h-100">
+                    <h4 class="fw-normal mb-1">18</h4>
+                    <p class="mb-auto text-nowrap small">مونوگراف ها</p>
+
+                    <a
+                      href="theses.html"
+                      class="text-primary text-decoration-none"
+                      style="font-size: 12px"
+                    >
+                      مشاهده همه <i class="bi bi-arrow-left"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Books -->
+            <div class="col-12 col-sm-6 col-lg-2">
+              <div class="card border-0 shadow-sm rounded-4 p-2 h-100">
+                <div class="d-flex gap-3 h-100">
+                  <div
+                    class="bg-info-subtle rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 55px; height: 55px"
+                  >
+                    <i class="bi bi-book-fill text-info fs-2"></i>
+                  </div>
+
+                  <div class="d-flex flex-column h-100">
+                    <h4 class="fw-normal mb-1">12</h4>
+                    <p class="mb-auto text-nowrap small">کتاب ها</p>
+
+                    <a
+                      href="books.html"
+                      class="text-primary text-decoration-none"
+                      style="font-size: 12px"
+                    >
+                      مشاهده همه <i class="bi bi-arrow-left"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Translated Books -->
+            <div class="col-12 col-sm-6 col-lg-2">
+              <div class="card border-0 shadow-sm rounded-4 p-2 h-100">
+                <div class="d-flex gap-3 h-100">
+                  <div
+                    class="bg-danger-subtle rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 55px; height: 55px"
+                  >
+                    <i class="bi bi-book-half text-danger fs-2"></i>
+                  </div>
+
+                  <div class="d-flex flex-column h-100">
+                    <h4 class="fw-normal mb-1">8</h4>
+                    <p class="mb-auto text-nowrap small">کتاب های ترجمه شده</p>
+
+                    <a
+                      href="translated_books.html"
+                      class="text-primary text-decoration-none"
+                      style="font-size: 12px"
+                    >
+                      مشاهده همه <i class="bi bi-arrow-left"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Teachers -->
+            <div class="col-12 col-sm-6 col-lg-2">
+              <div class="card border-0 shadow-sm rounded-4 p-2 h-100">
+                <div class="d-flex gap-3 h-100">
+                  <div
+                    class="bg-warning-subtle rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 55px; height: 55px"
+                  >
+                    <i class="bi bi-person-workspace text-warning fs-2"></i>
+                  </div>
+
+                  <div class="d-flex flex-column h-100">
+                    <h4 class="fw-normal mb-1">35</h4>
+                    <p class="mb-auto text-nowrap small">استادان</p>
+
+                    <a
+                      href="teachers.html"
+                      class="text-primary text-decoration-none"
+                      style="font-size: 12px"
+                    >
+                      مشاهده همه <i class="bi bi-arrow-left"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Students -->
+            <div class="col-12 col-sm-6 col-lg-2" style="z-index: 1;">
+              <div class="card border-0 shadow-sm rounded-4 p-2 h-100">
+                <div class="d-flex gap-3 h-100">
+                  <div
+                    class="bg-secondary-subtle rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                    style="width: 55px; height: 55px"
+                  >
+                    <i class="bi bi-people-fill text-secondary fs-2"></i>
+                  </div>
+
+                  <div class="d-flex flex-column h-100">
+                    <h4 class="fw-normal mb-1">120</h4>
+                    <p class="mb-auto text-nowrap small">محصلان</p>
+
+                    <a
+                      href="students.html"
+                      class="text-primary text-decoration-none"
+                      style="font-size: 12px"
+                    >
+                      مشاهده همه <i class="bi bi-arrow-left"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-2 my-0">
+            <!-- Graph 1 -->
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm rounded-3 h-100">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <i class="bi bi-file-text me-2"></i>
+                    مقالات
+                  </h5>
+
+                  <div
+                    class="chart d-flex justify-content-center align-items-center"
+                  >
+                    <img
+                      src="img/article.svg"
+                      alt="Articles"
+                      width="200"
+                      height="200"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Graph 2 -->
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm rounded-3 h-100">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <i class="bi bi-journal-bookmark me-2"></i>
+                    مونوگراف ها
+                  </h5>
+
+                  <div
+                    class="chart d-flex justify-content-center align-items-center"
+                  >
+                    <img
+                      src="img/article.svg"
+                      alt="Theses"
+                      width="200"
+                      height="200"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Graph 3 -->
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm rounded-3 h-100">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <i class="bi bi-book me-2"></i>
+                    کتاب ها
+                  </h5>
+
+                  <div
+                    class="chart d-flex justify-content-center align-items-center"
+                  >
+                    <img
+                      src="img/ictlogo.jpg"
+                      alt="Books"
+                      width="200"
+                      height="200"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Graph 4 -->
+            <div class="col-12 col-md-6">
+              <div class="card border-0 shadow-sm rounded-3 h-100">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <i class="bi bi-translate me-2"></i>
+                    کتاب های ترجمه شده
+                  </h5>
+
+                  <div
+                    class="chart d-flex justify-content-center align-items-center"
+                  >
+                    <img
+                      src="img/article.svg"
+                      alt="Translated Books"
+                      width="200"
+                      height="200"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- graphs row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- right side -->
+    </div>
+    <!-- d-flex flex-row -->
+
+
+
+   <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

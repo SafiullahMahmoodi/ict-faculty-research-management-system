@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        #userform div input{
+            border: 3px solid black;
+            margin-right: 8px;
+        }
+        input{
+         border: 2px solid lightblue;
+        }
+        .font13{
+          font-size: 13px;
+        }
+        /* ==========================
+   Change Password Modal
+========================== */
+
+.password-modal {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+/* Header */
+
+.password-modal .modal-header {
+  padding: 20px 24px 10px;
+}
+
+.password-modal .modal-title {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+
+/* Labels */
+
+.password-modal .form-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* Input group */
+
+.password-modal .input-group {
+  height: 45px;
+}
+
+
+/* Left icon */
+
+.password-modal .input-group-text {
+  background-color: #f8f9fa;
+
+  border-left: none;
+
+  min-width: 45px;
+  justify-content: center;
+}
+
+
+/* Password input */
+
+.password-modal .password-input {
+  height: 45px;
+
+  border-right: none;
+  border-left: none;
+  font-size: 14px;
+  text-align: right;
+  direction: rtl;
+  box-shadow: none !important;
+}
+
+
+/* Eye button */
+
+.password-modal .password-toggle {
+  width: 45px;
+  height: 45px;
+
+  background-color: #fff;
+  
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Focus */
+
+.password-modal .password-input:focus {
+  border-color: #0d6efd;
+}
+
+
+/* Footer */
+
+.password-modal .modal-footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+
+/* Buttons */
+
+.password-save-btn,
+.password-cancel-btn {
+  height: 44px;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+
+/* Save */
+
+.password-save-btn {
+  min-width: 120px;
+}
+
+
+/* Cancel */
+
+.password-cancel-btn {
+  min-width: 90px;
+}
+
+
+/* Button icons */
+
+.password-save-btn i,
+.password-cancel-btn i {
+  margin-left: 6px;
+}
+    </style>
+</head>
+<body>
+    
+        <nav
+      class="navbar navbar-expand-lg navbar-light justify-content-between p-2 text-white position-sticky top-0 w-100"
+      style="background-color: #0b2a4a;"
+    >
+      <div>
+        <img
+          src="img/rms.png"
+          alt=""
+          width="45px"
+          height="45px"
+          class="rounded-4 mx-2"
+          onclick=""
+        />
+        <span id="sysname" class="navbar-brand  text-white mb-0 h1" style="font-size: 14px"
+          >سیستم مدیریت تحقیق</span
+        >
+        <button class="btn bg-none text-light fs-4 m-0 p-0" id="list">
+        <i class="bi bi-list mx-3 bi-lg"></i>
+</button>
+      </div>
+      <div class="d-flex align-items-center fs-14 gap-3">
+        <i class="bi bi-bell"></i><!-- Button -->
+        <div class="dropdown">
+
+
+ <img src="img/Myphoto.JPG" alt="" width="40px" height="40px" class="rounded-5" data-bs-toggle="dropdown" data-bs-target="#dropdown" style="cursor: pointer;" id="profile" ></span> 
+
+<div class="dropdown-menu" id="dropdown" style="width: 250px; height: 430px;">
+  <div class="position-absolute d-none"></div>
+<div class="profile-photo d-flex justify-content-center flex-column align-items-center my-4" >
+    <img src="img/Myphoto.JPG" alt="my photo" width="60px" height="60px" style="border-radius: 50%;" class="d-block">
+    <h3 class="m-0">username</h3>
+    <p class="text-lightgray">email</p>
+</div>
+<hr>
+    <nav
+          class="sidebar d-flex justify-content-start flex-column fs-14  p-1"
+          style="position: sticky; top: 0"
+        >
+          <ul>
+            <li>
+              <a href="profile.html"
+                ><i class="bi bi-person"></i>پروفایل</a
+              >
+            </li>
+            <li>
+              <a href="article.html"
+                ><i class="bi bi-key"></i> تغییر رمز</a
+              >
+            </li>
+            <li>
+              <a href="theses.html"
+                ><i class="bi bi-gear"> </i> تنظیمات حساب </a
+              >
+            </li>
+            <hr>
+            <li>
+              <a href="books.html"><i class="bi bi-box-arrow-left"></i>  خروج</a>
+            </li>
+            
+     
+          </ul>
+        </nav>
+</div>
+</div>
+
+
+
+    </nav>
+        
+    <div class="d-flex flex-row" id="menu">
+      <div class="vh-100 stick" style="width: 230px; background-color: #ffffff">
+        <nav
+          class="sidebar d-flex justify-content-start flex-column fs-14 vh-100 p-1"
+          style="position: sticky; top: 0"
+        >
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="bi bi-house-door"></i>داشبورد</a
+              >
+            </li>
+            <li>
+              <a href="article.html"
+                ><i class="bi bi-file-text"></i> مقالات</a
+              >
+            </li>
+            <li>
+              <a href="theses.html"
+                ><i class="bi bi-journal-bookmark"> </i>پایان نامه ها</a
+              >
+            </li>
+            <li>
+              <a href="books.html"><i class="bi bi-book"></i> کتاب ها</a>
+            </li>
+            <li>
+              <a href="translated_books.html">
+                <i class="bi bi-translate"> </i>کتاب های ترجمه شده
+              </a>
+            </li>
+            <li>
+              <a href="teachers.html"
+                ><i class="bi bi-person-workspace"> </i>استادان</a
+              >
+            </li>
+            <li>
+              <a href="students.html"><i class="bi bi-people"> </i>محصلان</a>
+            </li>
+            <li>
+              <a href="departments.html"
+                ><i class="bi bi-bank"></i> دیپارتمان ها</a
+              >
+            </li>
+            <li>
+              <a href="reports.html">
+                <i class="bi bi-file-earmark-bar-graph"></i> گزارشات
+              </a>
+            </li>
+            <li>
+              <a href="users.html"><i class="bi bi-people"> </i>استفاده کننده گان</a>
+            </li>
+
+            <li style="margin-top: 190px">
+              <a href=""><i class="bi bi-gear"> </i>تنظیمات</a>
+            </li>
+            <li>
+              <a href=""><i class="bi bi-info-circle"> </i>درباره سیستم</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+      <!-- right side -->
+ <div class="container-fluid p-2 bg-light scroll" style="width: calc(100% - 180px); padding-bottom: 20px; margin: 0px;">
+        <div class="container d-flex flex-column px-1 py-2 shadow-sm">
+          <div class=" mb-1 d-flex  flex-row " >
+            <img src="img/Myphoto.JPG" alt=""  width="60px" height="60px" class="rounded-5 shadow">
+            <h3 class="m-2">پروفایل من</h3>
+            
+          </div>
+          <div class="container-fluid border-box shadow shadow-sm rounded-3 column bg-white m-3 p-3" style="width: 98%;">
+            <div class="p-3 d-flex flex-row  shadow-sm rounded-3 mb-3"  >
+                <div class="mx-5 ">
+                  <img src="img/Myphoto.JPG" alt="" width="100px" height="100px" style="border-radius: 50%;" class="shadow">
+                    <p class="my-3 ">
+                <button class="btn btn-outline-primary btn-sm rounded-5">تغییر عکس</button>
+                </p>
+                 </div>
+                <div>
+                    <h4>Username</h4>
+                   <button class="btn btn-sm btn-outline-primary rounded-4 font13 m-2" style="background-color: lightblue;">administrator</button>
+                    <p  class="m-1"> emailjdkjsdnkjnd</p>
+                    <p class="m-1">contactffff</p>
+                </div>
+                <div style="position: absolute; left: 60px; bottom: 390px;z-index: 1;">
+                  
+                  <button class="btn btn-outline-primary rounded-5 font13"    data-bs-toggle="modal"
+  data-bs-target="#changePasswordModal"> تغییر پسورد <i class="bi bi-key"></i></button>
+
+</div>
+
+
+<!-- Change Password Modal -->
+<div
+  class="modal fade"
+  id="changePasswordModal"
+  tabindex="-1"
+  aria-labelledby="changePasswordModalLabel"
+  aria-hidden="true"
+  dir="rtl"
+>
+  <div class="modal-dialog modal-dialog-centered modal-md">
+
+    <div class="modal-content password-modal">
+
+      <!-- Header -->
+      <div class="modal-header border-0">
+        <h5
+          class="modal-title"
+          id="changePasswordModalLabel"
+        >
+          تغییر رمز عبور
+        </h5>
+
+        <button
+          type="button"
+          class="btn-close ms-0 me-auto"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+
+      <!-- Form -->
+      <form action=" method="POST">
+
+        <div class="modal-body px-4">
+
+          <!-- Current Password -->
+          <div class="password-field mb-3">
+
+            <label
+              for="current_password"
+              class="form-label"
+            >
+              رمز عبور فعلی
+            </label>
+
+            <div class="input-group">
+
+              <span class="input-group-text">
+                <i class="bi bi-lock-fill"></i>
+              </span>
+
+              <input
+                type="password"
+                class="form-control password-input"
+                id="current_password"
+                name="current_password"
+                placeholder="رمز عبور فعلی را وارد کنید"
+                required
+              />
+
+              <button
+                type="button"
+                class="btn password-toggle"
+                onclick="togglePassword('current_password', this)"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- New Password -->
+          <div class="password-field mb-3">
+
+            <label
+              for="new_password"
+              class="form-label"
+            >
+              رمز عبور جدید
+            </label>
+
+            <div class="input-group">
+
+              <span class="input-group-text">
+                <i class="bi bi-key-fill "></i>
+              </span>
+
+              <input
+                type="password"
+                class="form-control password-input"
+                id="new_password"
+                name="new_password"
+                placeholder="رمز عبور جدید را وارد کنید"
+                minlength="8"
+                required
+              />
+
+              <button
+                type="button"
+                class="btn password-toggle"
+                onclick="togglePassword('new_password', this)"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- Confirm Password -->
+          <div class="password-field mb-2">
+
+            <label
+              for="confirm_password"
+              class="form-label"
+            >
+              تکرار رمز عبور جدید
+            </label>
+
+            <div class="input-group">
+
+              <span class="input-group-text">
+                <i class="bi bi-shield-lock-fill"></i>
+              </span>
+
+              <input
+                type="password"
+                class="form-control password-input"
+                id="confirm_password"
+                name="confirm_password"
+                placeholder="رمز عبور جدید را دوباره وارد کنید"
+                minlength="8"
+                required
+              />
+
+              <button
+                type="button"
+                class="btn password-toggle"
+                onclick="togglePassword('confirm_password', this)"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- Password requirement -->
+          <small class="text-muted d-block mt-3">
+            <i class="bi bi-info-circle"></i>
+            رمز عبور باید حداقل ۸ کاراکتر باشد.
+          </small>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="modal-footer border-0 px-4 pb-4">
+
+          <button
+            type="button"
+            class="btn btn-outline-primary password-cancel-btn"
+            data-bs-dismiss="modal"
+          >
+            <i class="bi bi-x-lg"></i>
+            لغو
+          </button>
+
+          <button
+            type="submit"
+            class="btn btn-primary password-save-btn"
+          >
+            <i class="bi bi-check-lg"></i>
+            تغییر رمز عبور
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+                </div>
+            </div>
+            <div class="p-2 ">
+                <form action="" class="row g-3" id="userform">
+                    <div class="col-6">
+                    <label for="" class="form-label mb-2">نام مکمل</label>
+                    <input type="text" class="form-control border-1" name="fullname" id="">
+                    </div>
+                    <div class="col-6">
+                    <label for="" class="form-label mb-2">نام استفاده کننده</label>
+                    <input type="text" class="form-control border-1" name="username" id="">
+                    </div>
+                    <div class="col-6">
+                    <label for="" class="form-label mb-2">ایمیل </label>
+                    <input type="text" class="form-control border-1" name="" id="">
+                    </div>
+                    <div class="col-6">
+                    <label for="" class="form-label mb-2">وضعیت استفاده کنن</label>
+                    <select class="form-select border-1" name="" id="">
+                        <option value="">فعال</option>
+                        <option value="">غیر فعال</option>
+                    </select>
+                    </div>
+                    <div class="col-6" >
+                    <label for="" class="form-label mb-2">نمبر تماس</label>
+                <input type="text" class="form-control border-1" name="" id="">
+                </div>
+                <div class="col-6">
+                <label for="" class="form-label mb-2">نوع استفاده کننده</label>
+            <input type="text" class="form-control border-1" name="" id="">    
+            </div>
+                  <div class="col-6">
+                  <button class="btn btn-primary mx-3">ذخیره تغییرات<i class="bi bi-save me-3"></i></button>
+                  <button class="btn btn-outline-primary mx-3">لغو <i class="bi bi-x me-4"></i></button>
+                </div>
+                </form>
+            </div>             
+          </div>
+        
+        </div>
+        <!-- container -->
+      </div>
+      <!-- right side -->
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
